@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            O maior banco de dados de games
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>                      
+            .slider {
+                width: inherit;
+                margin: 2em auto;
+                margin-top: 0px;
+
+            }
+
+            .slider-wrapper {
+                width: 100%;
+                height: 450px;
+                position: relative;
+
+            }
+
+            .slide {
+                float: left;
+                position: absolute;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 3s linear;
+
+            }
+
+            .slider-wrapper > .slide:first-child {
+                opacity: 1;
+            }
+            
+            #borda_slide{
+                border-radius: 35px;
+                border: solid 2px white;
+                box-sizing: border-box;
+                background-color: white;
+            }
+            
+                /*jssor slider loading skin spin css*/
+            .jssorl-009-spin img {
+                animation-name: jssorl-009-spin;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            @keyframes jssorl-009-spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            /*jssor slider bullet skin 053 css*/
+            .jssorb053 .i {position:absolute;cursor:pointer;}
+            .jssorb053 .i .b {fill:#abb1ba;fill-opacity:0.5;}
+            .jssorb053 .i:hover .b {fill-opacity:.7;}
+            .jssorb053 .iav .b {fill-opacity: 1;}
+            .jssorb053 .i.idn {opacity:.3;}
+
+            /*jssor slider arrow skin 093 css*/
+            .jssora093 {display:block;position:absolute;cursor:pointer;}
+            .jssora093 .c {fill:none;stroke:#abb1ba;stroke-width:400;stroke-miterlimit:10;}
+            .jssora093 .a {fill:none;stroke:#abb1ba;stroke-width:1500;stroke-miterlimit:10;}
+            .jssora093:hover {opacity:.8;}
+            .jssora093.jssora093dn {opacity:.6;}
+            .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
+            
+            
+        </style>
+    </head>
+    <body>
+
+        <!--CABEÇALHO-->
+
+        <header>
+            <div class="conteudo center">
+                <a href="index.html"><div id="logo" class="center" title="Rawg">RAWG</div></a>
+                
+                <div id="container_busca">
+                    <input id="campo_busca" value="" title="Clique para buscar..." onkeyup="cards();" type="text" placeholder=" Buscar...">
+                </div>
+                
+            </div>
+        </header>
+        
+        <!--SLIDE-->
+
+        <section id="section_slide">
+            <div id="borda_slide" class="conteudo center">
+                <!-- #region Jssor Slider Begin -->
+                <!-- Generator: Jssor Slider Maker -->
+                <!-- Source: https://www.jssor.com -->
+                <script src="js/slider.js"></script>
+                <script>
+                    jssor_1_slider_init = function() {
+
+                        var jssor_1_SlideshowTransitions = [
+                          {$Duration:500,$Delay:12,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
+                          {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+                          {$Duration:1000,x:-0.2,$Delay:20,$Cols:16,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+                          {$Duration:1600,y:-1,$Delay:40,$Cols:24,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
+                          {$Duration:1200,x:0.2,y:-0.1,$Delay:16,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}},
+                          {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.2,0.8],$Top:[0.2,0.8]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}},
+                          {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.1,0.9],$Top:[0.1,0.9]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}}
+                        ];
+
+                        var jssor_1_options = {
+                          $AutoPlay: 1,
+                          $SlideshowOptions: {
+                            $Class: $JssorSlideshowRunner$,
+                            $Transitions: jssor_1_SlideshowTransitions,
+                            $TransitionsOrder: 1
+                          },
+                          $ArrowNavigatorOptions: {
+                            $Class: $JssorArrowNavigator$
+                          },
+                          $BulletNavigatorOptions: {
+                            $Class: $JssorBulletNavigator$
+                          }
+                        };
+
+                        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                        /*#region responsive code begin*/
+
+                        var MAX_WIDTH = 1300;
+
+                        function ScaleSlider() {
+                            var containerElement = jssor_1_slider.$Elmt.parentNode;
+                            var containerWidth = containerElement.clientWidth;
+
+                            if (containerWidth) {
+
+                                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                                jssor_1_slider.$ScaleWidth(expectedWidth);
+                            }
+                            else {
+                                window.setTimeout(ScaleSlider, 30);
+                            }
+                        }
+
+                        ScaleSlider();
+
+                        $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                        /*#endregion responsive code end*/
+                    };
+                </script>
+
+                <div id="jssor_1" style="position:relative;top:0px;left:0px;width:1300px;height:450px;overflow:hidden;visibility:hidden;">
+                    <!-- Loading Screen -->
+                    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" alt="spin" src="img/spin.svg" />
+                    </div>
+                    <div id="imagens_slide" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:450px;overflow:hidden;">
+                        <div>
+                            <img data-u="image" src="https://media.rawg.io/media/games/fee/fee0100afd87b52bfbd33e26689fa26c.jpg">
+                        </div>
+                        <div>
+                            <img data-u="image" src="https://media.rawg.io/media/screenshots/291/291edc5d0a3d85b62c9433bcc0f0bca7.jpg">
+                        </div>
+                        <div>
+                            <img data-u="image" src="https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg">
+                        </div>
+                        <div>
+                            <img data-u="image" src="https://media.rawg.io/media/screenshots/8e0/8e03eaf562f711c523f8d6548c37be6d.jpg">
+                        </div>
+                        <div>
+                            <img data-u="image" src="https://media.rawg.io/media/screenshots/087/0879f4aab10a12ecde452f6326bac01e.jpg">
+                        </div>
+                        <div>
+                            <img data-u="image" src="https://media.rawg.io/media/games/1fa/1fa75f0895240b12fc65cc98ae9649fd.jpg">
+                        </div>
+                    </div>
+                    <!-- Bullet Navigator -->
+                    <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Arrow Navigator -->
+                    <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <!--                <circle class="c" cx="8000" cy="8000" r="5920"></circle>-->
+                            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            <!--                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>-->
+                        </svg>
+                    </div>
+                    <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <!--                <circle class="c" cx="8000" cy="8000" r="5920"></circle>-->
+                            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            <!--                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>-->
+                        </svg>
+                    </div>
+                </div>
+                <script>jssor_1_slider_init();</script>
+                <!-- #endregion Jssor Slider End -->
+            </div>
+        </section>
+
+        <!-- AREA ONDE FICA O VÍDEO E O RESULTADO DA BUSCA -->
+
+        <section id="section_resultado">
+            <div id="container_cards" class="conteudo center">
+                      
+                <video style="border-radius: 20px; width: inherit; height: inherit;" controls autoplay loop >
+
+                    <source style="border-radius: 20px;" src="https://media.rawg.io/media/stories/da1/da121882eb22d2affc6951eee4a067ff.mp4" type="video/mp4" >
+
+                </video>
+                
+                
+                
+            </div>
+        </section>
+        
+        <!--RODAPÉ-->
+        <footer>
+            <div class="conteudo center" style="text-align: center; color: white;">
+                Desenvolvido por Sabrina Alves
+            </div>
+        </footer>
+        <script src="js/rawg.js"></script>
+    </body>
+</html>
